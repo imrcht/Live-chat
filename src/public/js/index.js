@@ -30,4 +30,4 @@ async function outputTechs(url) {
 
 // async function outputTechUsers(userUrl, tech) {}
 
-outputTechs('https://rcht-live-chat.herokuapp.com/getTechNames');
+outputTechs('http://localhost:7000/getTechNames');
