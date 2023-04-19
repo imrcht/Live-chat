@@ -91,7 +91,7 @@ a {
 
 .chat-messages {
 	padding: 30px;
-	max-height: 500px;
+	max-height: 40rem;
 	overflow-y: scroll;
 }
 
@@ -185,8 +185,8 @@ a {
 
 #video-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, 300px);
-	grid-auto-rows: 300px;
+	grid-template-columns: repeat(auto-fill, 50px);
+	grid-auto-rows: 50px;
 }
 
 video{

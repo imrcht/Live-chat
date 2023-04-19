@@ -40,7 +40,7 @@ function addVideoStream(video, stream) {
   video.addEventListener('loadedmetadata', () => {
     video.play();
   });
-  videoGrid.append(video);
+  videoGrid?.append(video);
 }
 
 function connectToNewUser(userId, stream) {
@@ -144,6 +144,7 @@ function outputUsers(users) {
   userList.innerHTML = '';
   users.forEach((user) => {
     const li = document.createElement('li');
+    // li.innerHTML = `<div id="video-grid">${user.username}</div>`;
     li.innerText = user.username;
     userList.appendChild(li);
   });
