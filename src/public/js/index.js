@@ -30,4 +30,4 @@ async function outputTechs(url) {
 
 // async function outputTechUsers(userUrl, tech) {}
 
-outputTechs('http://localhost:7000/getTechNames');
+outputTechs(`https://p2p-communication.netlify.app/getTechUsers`);
