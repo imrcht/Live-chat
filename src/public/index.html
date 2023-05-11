@@ -11,12 +11,12 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="css/style.css" />
-		<title>Live chat POC</title>
+		<title>P2P Communication POC</title>
 	</head>
 	<body>
 		<!-- <div class="join-container">
 			<header class="join-header">
-				<h1>Live Chat</h1>
+				<h1>P2P Communication</h1>
 			</header>
 			<main class="join-main">
 				<form action="chat.html">
@@ -46,11 +46,11 @@
 		</div> -->
 		<div class="join-container">
 			<header class="join-header">
-				<h1>Huddle</h1>
+				<h1>P2P Communication</h1>
 			</header>
 			<main class="join-main">
 				<div class="chat-sidebar">
-					<h3><i class="fas fa-comments"></i> Tech Names:</h3>
+					<h3><i class="fas fa-comments"></i>Available Channel Names:</h3>
 					<ul id="tech-names">
 						<!-- <h4> tech1: </h4>
 						<ul id="tech-users">
@@ -73,16 +73,17 @@
 						/>
 					</div>
 					<div class="form-control">
-						<label for="room">Tech</label>
+						<label for="room">Channel</label>
 							<input
 							type="text"
 							name="tech"
 							id="room"
-							placeholder="Enter techname"
+							placeholder="Enter channel"
 							required
 							/>
 					</div>
-					<button type="submit" class="btn">Start voice chat</button>
+					<button type="submit" class="btn" action="huddle.html">Start voice chat</button>
+					<button type="submit" class="btn" formaction="chat.html">Start chat</button>
 				</form>
 			</main>
 		</div>
