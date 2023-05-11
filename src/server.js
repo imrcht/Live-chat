@@ -16,6 +16,12 @@ const {
   getTechUsers,
   getTechNames,
 } = require('./utils/users');
+
+const {
+  incrementChannelMembers,
+  decrementChannelMembers,
+} = require('./utils/room');
+
 const colors = require('colors');
 
 const app = express();
@@ -121,6 +127,11 @@ global.io.on('connection', (socket) => {
       tech: user.tech,
       users: getTechUsers(user.tech),
     });
+
+    const updatedResult = await incrementChannelMembers({
+      room: room ? room : null,
+      tech: tech ? tech : null,
+    });
   });
 
   // Listen for chat-message
@@ -150,6 +161,13 @@ global.io.on('connection', (socket) => {
         room: user.room,
         users: getRoomUsers(user.room),
       });
+
+      console.log('user leaving: ', user);
+
+      const updatedResult = await decrementChannelMembers({
+        room: user.room,
+        tech: user.tech,
+      });
     }
   });
 
@@ -177,6 +195,11 @@ global.io.on('connection', (socket) => {
       global.io.to(user.tech).emit('techUsers', {
         tech: user.tech,
         users: getTechUsers(user.tech),
+      });
+
+      const updatedResult = await decrementChannelMembers({
+        room: user.room,
+        tech: user.tech,
       });
     }
   });

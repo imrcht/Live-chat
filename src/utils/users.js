@@ -15,6 +15,7 @@ async function userJoin(id, username, user_id, room, tech) {
       chat = await Chat.create({
         chat_id: nanoid(),
         chat_room: room,
+        current_members: 1,
         username: username,
         socket_id: id,
       });
@@ -33,6 +34,7 @@ async function userJoin(id, username, user_id, room, tech) {
       techname = await Tech.create({
         tech_id: nanoid(),
         tech: tech,
+        current_members: 1,
         username: username,
         socket_id: id,
       });

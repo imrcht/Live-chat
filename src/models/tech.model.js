@@ -6,6 +6,7 @@ const techSchema = new mongoose.Schema(
     tech: String,
     user_email: String,
     username: String,
+    current_members: { type: Number, default: 0 },
     socket_id: String,
     team_email: String,
     member_email: String,

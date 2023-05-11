@@ -9,7 +9,7 @@ async function outputTechs(url) {
   techList.innerHTML = '';
   techNames.forEach((techName) => {
     const li = document.createElement('li');
-    li.innerText = techName.tech;
+    li.innerText = `${techName.tech} - ${techName.current_members}`;
     techList.appendChild(li);
   });
 }
@@ -30,4 +30,6 @@ async function outputTechs(url) {
 
 // async function outputTechUsers(userUrl, tech) {}
 
-outputTechs(`https://p2p-communication.netlify.app/getTechNames`);
+outputTechs(
+  `https://9c24-2409-4043-4e1f-1b7-3510-7ac7-619-c137.ngrok-free.app/getTechNames`
+);
